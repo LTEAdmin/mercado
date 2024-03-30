@@ -1,9 +1,9 @@
 {{#each producto}}
 
-  <div class="product-card">
-    
+  {{!-- <div class="product-card">
       <div class="product-image">
-            <img src="img/{{this.name}}.png" alt="{{this.name}}">
+            const Prod=this.name;
+            <img src='./assets/img/${Prod}.png' alt=Prod>
       </div>
 
       <div class="product-info">
@@ -12,6 +12,15 @@
             <p class="product-name">{{this.name}}</p>
             <button class="btn product-btn">Agregar</button>
       </div>
+  </div> --}}
+  const Prod=this.name;
+  <div class="card" style="width: 18rem;">
+    <img src='../../assets/img/>{{this.name}}' class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title
+        and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
   </div>
-
 {{/each}}
