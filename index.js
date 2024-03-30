@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const PORT = 3000;
+const productos = ['banana', 'cebolla', 'pimenton', 'papas', 'lechuga', 'tomate'];
 
 // trabajar con handlebars
 const exphbs = require("express-handlebars");
@@ -15,9 +16,17 @@ app.use(express.static('assets'));
 app.use('/bootstrap', express.static('node_modules/bootstrap/dist/css'));
 
 // muestra que puerto se esta usando para el servidor
-app.listen(port, () => console.log(`El servidor se ha levantado en el puerto http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`El servidor se ha levantado en el puerto http://localhost:${PORT}`));
 
 //Rutas
-app.get('/main', (req, res) => res.send('Mercado'));
+//app.get('/main', (req, res) => res.send('Mercado'));
+
+//
+app.get('/', (req, res) => { 
+    res.render('home', {
+        
+    })
+})
+
 /* Si ruta no existe manda mensaje, ojo esta linea debe estar al final del codigo, sobre todo despues de todas las rutas validas */
 app.get('*', (req, res) => res.send('para determinar que la ruta no existe'))
