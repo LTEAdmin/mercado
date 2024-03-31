@@ -23,7 +23,7 @@ app.listen(PORT, () => console.log(`El servidor se ha levantado en el puerto htt
 //
 app.get('/', (req, res) => { 
     res.render('home', {
-        producto : ['banana', 'cebolla', 'pimenton', 'papas', 'lechuga', 'tomate'],
+        producto : ['banana', 'cebollas', 'pimenton', 'papas', 'lechuga', 'tomate'],
     })
 })
 
