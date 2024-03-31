@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const PORT = 3000;
-
+/* const prodc = */
 // trabajar con handlebars
 const exphbs = require("express-handlebars");
 app.set('view engine', 'hbs');
